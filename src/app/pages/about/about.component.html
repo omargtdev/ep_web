@@ -1,0 +1,49 @@
+<section id="clients">
+  <div class="container">
+    <h2>Clientes</h2>
+
+    <div class="row">
+      <div class="col-md-6">
+        <table class="table">
+        <thead>
+            <tr>
+            <th>Empresa</th>
+            <th>Nombres</th>
+            <th>Cargo</th>
+            <th>Ciudad</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let client of clients"
+                (click)="selectRow(client)"
+                [class.row-selected] = "client === clientSelected">
+            <td>{{client.empresa}}</td>
+            <td>{{client.nombres}}</td>
+            <td>{{client.cargo}}</td>
+            <td>{{client.ciudad}}</td>
+            </tr>
+        </tbody>
+        </table>
+      </div>
+      <div class="col-md-6" *ngIf="clientSelected">
+        <div class="container">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="fs-2 fw-bold">{{ clientSelected.empresa }}</h5>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Nombres: {{ clientSelected.nombres }}</li>
+                        <li class="list-group-item">Cargo: {{ clientSelected.cargo }}</li>
+                        <li class="list-group-item">Ciudad: {{ clientSelected.ciudad }}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+      </div>
+      <div class="col-md-6" *ngIf="!clientSelected">
+        <div class="container">
+            <p class="text-center mt-5 fst-italic">Select a register to show data</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

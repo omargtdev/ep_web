@@ -1,0 +1,15 @@
+.row-selected {
+    background-color: var(--color-primary);
+}
+
+.row-selected td {
+    color: var(--color-white);
+}
+
+#clients {
+    margin: 20px 0 40px;
+}
+
+h2 {
+    font-weight: bold;
+}

@@ -1,0 +1,22 @@
+<div id="services">
+    <div class="container">
+        <h3 class="section-subtitle">OUR LATEST SERVICES</h3>
+        <h2 class="section-title">WHAT KIND OF SERVICES WE ARE OFFERING</h2>
+    </div>
+    <div class="row row-cols-1 row-cols-md-4 g-4">
+        <div class="col" *ngFor="let provider of providers">
+            <div class="card">
+                <img src="assets/img/banner1.jpg" class="card-img-top" alt="Empresa proveedor">
+                <div class="card-body">
+                    <h5 class="card-title">{{ provider.nombreempresa }}</h5>
+                    <p class="card-text">
+                        Contacto: {{ provider.nombrecontacto }},
+                        Cargo: {{ provider.cargocontacto }},
+                        Ciudad: {{ provider.ciudad }},
+                        Pais: {{ provider.pais }}
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

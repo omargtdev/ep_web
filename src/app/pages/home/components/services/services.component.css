@@ -1,0 +1,9 @@
+#services {
+    margin: 40px 60px;
+}
+
+#services .container {
+    max-width: 540px;
+    text-align: center;
+    margin: 60px auto;
+}
